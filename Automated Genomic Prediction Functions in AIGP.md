@@ -11,35 +11,15 @@ enabling researchers to focus on scientific insights rather than
 technical implementation.
 
 ## Key Advantages
+### 1.Adaptive data preprocessing
+The system automatically detects data characteristics, selects appropriate dimensionality reduction methods (PCA or PHATE), and supports mainstream input formats such as PLINK, PED, and VCF. It performs comprehensive missing-value checks, data alignment, and multi-format compatibility, thereby minimizing manual preprocessing and format conversion efforts.
+### 2.Automated model testing and selection
+AIGP now supports parallel testing of more than ten mainstream machine learning algorithms. It automatically performs dimensionality reduction when appropriate, matches regression or classification models according to the task type, compares all model performances in detail, and identifies the optimal model. This automation greatly reduces computation time while ensuring consistent and reproducible results.
+### 3.Hardware detection and adaptive acceleration
+The new hardware detection and optimization module further enhances automation. Upon startup, AIGP automatically identifies the operating system and hardware configuration (CPU type, GPU availability, memory size, and core count) and selects the optimal computational strategy accordingly. When GPU resources (e.g., NVIDIA CUDA) are available, the system switches automatically to GPU mode for substantial speed-up. Otherwise, it enables multi-core parallel computation, dynamically adjusting the number of threads based on CPU and memory capacity. Thread affinity and memory prefetch parameters are automatically configured to reduce I/O latency and ensure stable performance across platforms.
 
-### 1. One-Click Intelligent Analysis
 
--   **No manual model selection**: Automatically evaluates 10+
-    mainstream machine-learning algorithms (XGBoost, LightGBM, CatBoost,
-    RandomForest, SVM, etc.)
--   **No parameter tuning required**: Built-in intelligent
-    hyperparameter optimization with Grid Search and Sparrow Search
-    Algorithm (SSA)
--   **No manual comparison**: Automatically ranks all
-    model--preprocessing combinations and recommends the optimal
-    solution
 
-### 2. Smart Preprocessing Strategies
-
--   **Adaptive dimensionality reduction**: Automatically selects the
-    optimal method based on data characteristics (PCA or PHATE)
--   **High-dimensional optimization**: Automatically selects
-    preprocessing strategies for datasets with \>1000 genomic features\
--   **Multi-format compatibility**: Supports PLINK RAW, TXT, PED, VCF,
-    and other formats
-
-### 3. Comprehensive Performance Evaluation
-
--   **Automatic cross-validation**: 5-fold by default
--   **Scientific metrics**: Pearson correlation for regression; accuracy
-    for classification
--   **Full statistics**: Provides confidence intervals, summary tables,
-    and detailed logs
 
 ## How to Use
 
