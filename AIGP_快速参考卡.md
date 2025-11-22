@@ -95,28 +95,7 @@ awk '{print NF; exit}' your_file.txt
 | PLINK PED | .ped | 第7列开始 | 第6列 |
 | VCF格式 | .vcf | 第10列开始 | 需指定 |
 
-## 🎯 支持的模型
 
-### 回归任务
-- `xgboost` - XGBoost回归
-- `LGBMRegressor` - LightGBM回归
-- `CatBoostRegressor` - CatBoost回归
-- `RandomForest` - 随机森林回归
-- `SVM` - 支持向量回归
-
-### 分类任务
-- `xgboost` - XGBoost分类
-- `LGBM` - LightGBM分类
-- `CatBoost` - CatBoost分类
-- `RandomForest` - 随机森林分类
-- `LogisticRegression` - 逻辑回归
-
-## 📊 评估指标
-
-| 任务类型 | 主要指标 | 取值范围 |
-|----------|----------|----------|
-| 回归 | Pearson相关系数 | -1 到 1 |
-| 分类 | 准确率 | 0 到 1 |
 
 ---
 
