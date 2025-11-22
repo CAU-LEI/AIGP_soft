@@ -147,8 +147,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- Project Link: [https://github.com/username/AIGP](https://github.com/username/AIGP)
-- Issue Tracker: [https://github.com/username/AIGP/issues](https://github.com/username/AIGP/issues)
+- email:leiwei@cau.edu.cn
 
 ## 🙏 Acknowledgments
 
