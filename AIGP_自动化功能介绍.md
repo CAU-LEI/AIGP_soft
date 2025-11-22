@@ -1,133 +1,170 @@
-# AIGP自动化基因组预测功能 - 革命性的一键式分析体验
+# Automated Genomic Prediction Functions in AIGP
 
-## 功能概述
-AIGP现已集成**自动化基因组预测模块**，彻底改变了传统基因组数据分析的工作流程。这一创新功能将复杂的模型选择、参数优化和性能比较过程完全自动化，让研究人员能够专注于科学发现而非技术细节。
+Overview
 
-## 🎯 核心优势
+AIGP now integrates a comprehensive Automated Genomic Prediction Module, fundamentally transforming the conventional workflow in genomic data analysis.
+This innovative module fully automates model selection, hyperparameter tuning, preprocessing strategies, and performance benchmarking — enabling researchers to focus on scientific insights rather than technical implementation.
 
-### 1. 一键式智能分析
-- **无需手动选择模型**：系统自动测试10+种主流机器学习算法（XGBoost、LightGBM、CatBoost、RandomForest、SVM等）
-- **无需配置参数**：内置智能超参数优化，支持网格搜索和麻雀搜索算法
-- **无需比较结果**：自动生成完整的性能排名和最佳模型推荐
+🎯 Key Advantages
+1. One-Click Intelligent Analysis
 
-### 2. 智能预处理策略
-- **自适应降维**：根据数据特征自动选择降维方法：PCA（50/100/200维）和PHATE（50维）
-- **高维数据优化**：针对高维基因组数据（>1000特征）自动应用最优预处理方案
-- **多格式支持**：支持多种数据格式：PLINK RAW、文本、PED、VCF等
+No manual model selection: Automatically evaluates 10+ mainstream machine-learning algorithms (XGBoost, LightGBM, CatBoost, RandomForest, SVM, etc.)
 
-### 3. 全面的性能评估
-- **自动交叉验证**：自动进行K折交叉验证（默认5折，可自定义）
-- **科学评估指标**：回归任务使用皮尔逊相关系数评估，分类任务使用准确率评估
-- **详细统计信息**：提供完整的统计信息和置信区间
+No parameter tuning required: Built-in intelligent hyperparameter optimization with Grid Search and Sparrow Search Algorithm (SSA)
 
-## 🔧 使用方法
+No manual comparison: Automatically ranks all model–preprocessing combinations and recommends the optimal solution
 
-### 简单命令格式
-```bash
-python main.py --geno <基因型文件> --phe <表型文件> --type <任务类型> --auto
-```
+2. Smart Preprocessing Strategies
 
-### 实际案例
-```bash
-# 马匹基因组分类预测（4分类任务）
+Adaptive dimensionality reduction: Automatically selects the optimal method based on data characteristics
+– PCA (50/100/200 components)
+– PHATE (50 components)
+
+High-dimensional optimization: Automatically selects preprocessing strategies for datasets with >1000 genomic features
+
+Multi-format compatibility: Supports PLINK RAW, TXT, PED, VCF, and other formats
+
+3. Comprehensive Performance Evaluation
+
+Automatic cross-validation: K-fold cross-validation (5-fold by default, customizable)
+
+Scientific metrics: Pearson correlation for regression; accuracy for classification
+
+Full statistics: Provides confidence intervals, summary tables, and detailed logs
+
+🔧 How to Use
+Basic Command
+python main.py --geno <genotype_file> --phe <phenotype_file> --type <task_type> --auto
+
+Examples
+# Horse genomic classification (4-class task)
 python main.py --geno horse.raw --phe horse_phe.txt --type classification --auto --cv 10
 
-# 回归任务自动化预测
+# Regression task
 python main.py --geno data.raw --phe phenotype.txt --type regression --auto --cv 5
-```
 
-## 📊 分析结果展示
+📊 Analysis Outputs
 
-系统会自动生成：
+AIGP automatically generates:
 
-### 实时分析过程
-- **进度显示**：每个模型和预处理组合的测试进度
-- **性能反馈**：实时显示每个模型的评估结果
-- **优化状态**：显示超参数优化过程和结果
+Real-Time Analysis Display
 
-### 结果输出
-- **性能排名表**：所有模型按性能排序，前10名重点展示
-- **最佳模型推荐**：包含模型名称、预处理方法、优化策略和最优参数
-- **详细结果文件**：JSON格式保存完整结果，支持后续分析
-- **文本报告**：人类可读的详细分析报告
+Progress tracking for each model and preprocessing pipeline
 
-## 🎉 实际效果验证
+Real-time performance feedback
 
-### 基于真实马匹基因组数据测试
-- **数据规模**：480样本，50,621特征
-- **任务类型**：4分类任务
-- **自动测试**：30+种模型-预处理组合
-- **分析时间**：从数小时缩短到几分钟
-- **结果可靠性**：显著优于随机猜测（25%），达到实用水平
+Hyperparameter optimization progress and results
 
+Final Outputs
 
+Performance ranking table: Sorted list of all tested models
 
-## 💡 核心价值
+Best model recommendation: Includes algorithm, preprocessing method, optimization strategy, and optimal parameters
 
-### 对研究人员
-- **时间节省**：节省90%的模型调试时间
-- **结果保证**：避免遗漏最优模型组合
-- **客观比较**：获得客观、全面的性能比较
-- **专注科研**：专注于生物学解释而非技术实现
+JSON result file: Full output for downstream analysis
 
-### 对项目效率
-- **系统性分析**：从"试错式"分析转为"系统性"分析
-- **结果可重现**：确保分析结果的完整性和可重现性
-- **大规模支持**：支持大规模基因组数据的快速筛选
-- **基础模型**：为后续深度分析提供可靠的基础模型
+Text report: Human-readable summary of the analysis
 
-## 🚀 技术特点
+🎉 Performance Demonstration
+Tested on Real Horse Genomic Data
 
-### 自动化流程
-1. **数据加载**：自动识别和加载基因型、表型数据
-2. **预处理选择**：根据数据特征智能选择预处理方法
-3. **模型测试**：并行测试多种机器学习算法
-4. **参数优化**：自动进行超参数调优
-5. **结果排序**：按性能自动排序并推荐最佳模型
+Dataset size: 480 samples, 50,621 SNP features
 
-### 支持的算法
-- **回归任务**：XGBoost、LightGBM、CatBoost、RandomForest、GradientBoosting、SVM、KNN、Ridge、LinearRegression、ElasticNet、AdaBoost
-- **分类任务**：XGBoost、LightGBM、CatBoost、RandomForest、GradientBoosting、SVM、KNN、LogisticRegression、AdaBoost、ExtraTrees
+Task type: 4-class classification
 
-### 优化策略
-- **高级算法**：LightGBM和CatBoost使用麻雀搜索算法（SSA）优化
-- **传统方法**：其他算法使用网格搜索优化
-- **智能参数**：根据模型类型自动设置参数搜索范围
+Pipeline: 30+ model–preprocessing combinations automatically tested
 
-## 📈 使用场景
+Speed: Reduced from several hours to a few minutes
 
-### 适用情况
-- **基因组预测**：动植物基因组表型预测
+Reliability: Accuracy significantly above random (25%), reaching practical levels
 
+💡 Core Value
+For Researchers
 
-### 数据要求
-- **样本数量**：建议≥100个样本
-- **特征数量**：支持高维数据（>10,000个SNP）
-- **数据格式**：支持标准PLINK格式和自定义格式
-- **标签要求**：分类任务标签需从0开始（0,1,2,3...）
+Save time: >90% reduction in model tuning workload
 
-## 🔄 与传统方法对比
+Guaranteed results: Eliminates the risk of missing high-performance models
 
-| 方面 | 传统方法 | AIGP自动化 |
-|------|----------|------------|
-| 模型选择 | 手动选择1-2个 | 自动测试10+个 |
-| 参数调优 | 手动网格搜索 | 智能自动优化 |
-| 预处理 | 固定方法 | 自适应选择 |
-| 结果比较 | 手动对比 | 自动排序 |
-| 分析时间 | 数小时到数天 | 几分钟到几小时 |
-| 结果可靠性 | 依赖经验 | 系统性保证 |
+Objective comparisons: Standardized evaluation across all algorithms
 
-## 🎯 总结
+Focus on biology: Spend time interpreting results, not tuning code
 
-AIGP的自动化基因组预测功能代表了基因组数据分析的重大进步。它将复杂的机器学习流程完全自动化，让研究人员能够：
+For Project Efficiency
 
-- **一键获得最佳模型**：无需专业知识即可获得最优结果
-- **节省大量时间**：从数天的调试工作缩短到几分钟
-- **确保结果完整**：不会遗漏任何可能的优秀模型组合
-- **专注科学发现**：将精力投入到生物学解释而非技术实现
+Systematic workflow: From trial-and-error to fully systematic testing
 
-这一创新功能让基因组预测分析变得前所未有的简单和高效，真正实现了"输入数据，获得最佳结果"的智能化分析体验。无论是基因组学新手还是资深专家，都能从中受益，将更多精力投入到科学发现中。
+Reproducibility: All results are recorded and reproducible
 
----
+Scalability: Supports large-scale genomic screening and multi-trait analysis
 
-*本文档介绍了AIGP v2.0的自动化基因组预测功能，更多技术细节请参考相关技术文档。*
+Foundation for deeper research: Provides strong baseline models for downstream tasks
+
+🚀 Technical Features
+Automated Pipeline
+
+Data loading: Automatically detects genotype and phenotype formats
+
+Preprocessing selection: Smart PCA/PHATE selection
+
+Model evaluation: Parallel testing of multiple ML algorithms
+
+Hyperparameter tuning: SSA Grid Search optimization
+
+Result ranking: Automatic performance ranking and best model selection
+
+Supported Algorithms
+
+Regression: XGBoost, LightGBM, CatBoost, RandomForest, GradientBoosting, SVM, KNN, Ridge, LinearRegression, ElasticNet, AdaBoost
+
+Classification: XGBoost, LightGBM, CatBoost, RandomForest, GradientBoosting, SVM, KNN, LogisticRegression, AdaBoost, ExtraTrees
+
+Optimization Strategies
+
+Advanced optimization: SSA for LightGBM and CatBoost
+
+Grid Search: For all other algorithms
+
+Smart search spaces: Automatically adjusted based on the model type
+
+📈 Use Cases
+Ideal for
+
+Genomic prediction in animals and plants
+
+SNP-based phenotype prediction
+
+High-dimensional genomic datasets (>10k SNPs)
+
+Automated baseline screening before deep learning models
+
+Data Requirements
+
+Samples: Recommended ≥100
+
+Features: Supports extremely high-dimensional inputs
+
+Labels: Classification labels must start from 0
+
+🔄 Comparison With Traditional Methods
+Aspect	Traditional Workflow	AIGP Automated Workflow
+Model selection	1–2 models chosen manually	10+ models tested automatically
+Parameter tuning	Manual Grid Search	Intelligent automated optimization
+Preprocessing	Fixed	Adaptive (PCA/PHATE)
+Result comparison	Manual, error-prone	Automated ranking
+Analysis time	Hours to days	Minutes to hours
+Reliability	Depends on experience	Systematic and reproducible
+🎯 Conclusion
+
+The automated genomic prediction module in AIGP marks a major step forward in genomic data analysis.
+It enables researchers to:
+
+Obtain the best model with a single command
+
+Reduce days of model tuning to minutes
+
+Guarantee comprehensive and systematic evaluation
+
+Focus entirely on biological interpretation rather than technical hurdles
+
+This feature makes genomic prediction simpler, faster, and more reliable than ever — truly achieving an intelligent “input data → get best result” experience.
+Both beginners and experts can benefit from this next-generation analysis framework.
