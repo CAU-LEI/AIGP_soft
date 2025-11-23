@@ -1,4 +1,4 @@
-# AIGP Automated Genomic Prediction -- A Revolutionary One-Click Analysis Experience
+# AIGP Automated Genomic Prediction 
 
 ## Overview
 
@@ -54,37 +54,14 @@ python main.py --geno data.raw --phe phenotype.txt --type regression --auto --cv
 -   **JSON result file**
 -   **Full text report**
 
-## Performance Demonstration
 
-### Based on Real Horse Genomic Data
-
--   **480 samples**, **50,621 SNPs**\
--   **30+** model-preprocessing combinations tested\
--   **Minutes**, not hours\
--   **Accuracy \>\> random (25%)**
-
-## Core Value
-
-### For Researchers
-
--   Save **90%** of model tuning time
--   Fully automated, systematic, reproducible
--   Focus on biology, not debugging code
-
-### For Project Efficiency
-
--   Systematic workflow\
--   Highly reproducible results\
--   Scalable to large datasets
-
-## Technical Features
 
 ### Automated Pipeline
 
-1.  Data loading\
-2.  Preprocessing\
-3.  Model evaluation\
-4.  Hyperparameter tuning\
+1.  Data loading
+2.  Preprocessing
+3.  Model evaluation
+4.  Hyperparameter tuning
 5.  Result ranking
 
 ### Supported Algorithms
@@ -94,15 +71,7 @@ python main.py --geno data.raw --phe phenotype.txt --type regression --auto --cv
 -   Classification: XGBoost, LightGBM, CatBoost, RF, SVM, KNN, Logistic
     Regression, etc.
 
-## Comparison With Traditional Methods
 
-  Aspect             Traditional Workflow   AIGP Automated Workflow
-  ------------------ ---------------------- -------------------------
-  Model selection    Manual                 Automated
-  Parameter tuning   Manual                 Intelligent
-  Preprocessing      Fixed                  Adaptive
-  Time               Hours--days            Minutes--hours
-  Reliability        Experience-based       Systematic
 
 ## Conclusion
 
