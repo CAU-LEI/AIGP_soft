@@ -377,19 +377,7 @@ The system automatically compares:
 - Uses optimized version if it performs better
 - Falls back to base model if optimization doesn't improve performance
 
-## 📝 Notes
 
-1. **Fixed Random Seed**: All operations use `random_state=42` for reproducibility
-2. **Error Handling**: Failed models are skipped, analysis continues
-3. **Memory Usage**: Large datasets may require significant RAM
-4. **GPU Support**: Currently disabled in automation mode (`gpu=False`)
-5. **Categorical Features**: Currently not supported in automation mode
-
-## 🔄 Version Information
-
-- **AIGP Version**: 2.0+
-- **Last Updated**: 2024
-- **Compatibility**: Python 3.8+
 
 ---
 
