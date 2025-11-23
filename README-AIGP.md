@@ -33,10 +33,7 @@
   In addition, AIGP enhances prediction accuracy through various parameter optimization methods such as sparrow search and can mine SNP loci related to phenotypes based on the weight of SNPs in the model. By assessing the importance of SNP loci through various methods, generally, the greater the weight of the SNP locus, the stronger its correlation with the phenotype. The software outputs model interpretability through SHAP theory, including custom selection of feature loci for importance ranking, local and global interactive explanations based on single samples, multiple samples combined with features, and visualization display. Users can customize the interaction between different features and samples for further research. It is recommended that users compare the weights of various SNPs provided by different methods of AIGP with GWAS results for reference, to exclude false positive results from each method and increase credibility.
 
   AIGP has shown strong advantages in meeting the needs of genomic data analysis in the era of big data, capable of efficiently and accurately predicting and analyzing large-scale data. It provides new tools and software platforms for AI breeding and digitalization.
-
-**Soft Address:** [https://github.com/CAU-LEI/AIGP.github.io/tree/master](https://github.com/CAU-LEI/AIGP.github.io/tree/master)  
-
-**Additional Data:** [https://github.com/CAU-LEI/AIGP.github.io/tree/main/test_data](https://github.com/CAU-LEI/AIGP.github.io/tree/main/test_data)  
+ 
 
 **Contact Us:** [leiwei@cau.edu.cn](leiwei@cau.edu.cn)  
 
