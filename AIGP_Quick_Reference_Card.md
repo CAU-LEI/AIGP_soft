@@ -95,30 +95,5 @@ awk '{print NF; exit}' your_file.txt
 | PLINK PED | .ped | Starting from column 7 | Column 6 |
 | VCF Format | .vcf | Starting from column 10 | Need to specify |
 
-## 🎯 Supported Models
 
-### Regression Tasks
-- `xgboost` - XGBoost Regression
-- `LGBMRegressor` - LightGBM Regression
-- `CatBoostRegressor` - CatBoost Regression
-- `RandomForest` - Random Forest Regression
-- `SVM` - Support Vector Regression
-
-### Classification Tasks
-- `xgboost` - XGBoost Classification
-- `LGBM` - LightGBM Classification
-- `CatBoost` - CatBoost Classification
-- `RandomForest` - Random Forest Classification
-- `LogisticRegression` - Logistic Regression
-
-## 📊 Evaluation Metrics
-
-| Task Type | Main Metric | Value Range |
-|-----------|-------------|-------------|
-| Regression | Pearson Correlation Coefficient | -1 to 1 |
-| Classification | Accuracy | 0 to 1 |
-
----
-
-💡 **For detailed instructions, see**: `AIGP_Data_Format_and_Index_Guide.md`
 
